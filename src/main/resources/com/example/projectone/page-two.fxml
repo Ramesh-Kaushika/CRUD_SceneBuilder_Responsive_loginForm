@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root2" prefHeight="666.0" prefWidth="650.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectone.controller.PageTwoController">
+   <children>
+      <Label blendMode="SRC_ATOP" layoutX="220.0" layoutY="14.0" text="Submit Form" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="42.0" layoutY="375.0" mnemonicParsing="false" onAction="#btnBackOnAction" style="-fx-background-color: #0be881;" text="Previous" />
+      <TextField fx:id="txtName" layoutX="107.0" layoutY="108.0" prefHeight="25.0" prefWidth="176.0" promptText="Name" />
+      <TextField fx:id="txtAge" layoutX="107.0" layoutY="189.0" prefHeight="18.0" prefWidth="176.0" promptText="Age" />
+      <Label fx:id="lblName" layoutX="515.0" layoutY="332.0" prefHeight="25.0" prefWidth="65.0" text="L1" />
+      <Label fx:id="lblAge" layoutX="515.0" layoutY="397.0" prefHeight="25.0" prefWidth="65.0" text="L2" />
+      <Label fx:id="lblAgeAfter" layoutX="515.0" layoutY="453.0" prefHeight="25.0" prefWidth="65.0" text="L3" />
+      <Button fx:id="btnsubmitID" layoutX="497.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnSubmit" prefHeight="44.0" prefWidth="65.0" style="-fx-background-color: #ffd32a;" text="Submit" />
+      <ComboBox fx:id="cmdSample" layoutX="122.0" layoutY="225.0" onAction="#cmbOnAction" prefWidth="150.0" />
+      <CheckBox fx:id="chckbxAL" layoutX="292.0" layoutY="299.0" mnemonicParsing="false" text="A/L" />
+      <CheckBox fx:id="chckbxScholarship" layoutX="150.0" layoutY="300.0" mnemonicParsing="false" text="Scholarship" />
+      <CheckBox fx:id="chckbxOL" layoutX="383.0" layoutY="299.0" mnemonicParsing="false" text="O/L" />
+      <Group layoutX="260.0" layoutY="344.0">
+         <children>
+            <RadioButton fx:id="rbMale" mnemonicParsing="false" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbOther" layoutY="65.0" mnemonicParsing="false" text="Othor" toggleGroup="$gender" />
+            <RadioButton fx:id="rbFemale" layoutY="35.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+         </children>
+      </Group>
+      <DatePicker fx:id="dpDate" layoutX="223.0" layoutY="465.0" />
+      <TableView fx:id="tbTableView" layoutX="309.0" layoutY="89.0" prefHeight="200.0" prefWidth="334.0">
+        <columns>
+            <TableColumn fx:id="tbIDColumn" prefWidth="67.0" text="ID" />
+          <TableColumn fx:id="tbName" prefWidth="112.0" text="Name" />
+          <TableColumn fx:id="tbContact" prefWidth="94.0" text="Contact" />
+            <TableColumn fx:id="tbOption" prefWidth="60.0" text="Option" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblFirstName" layoutX="26.0" layoutY="116.0" prefHeight="25.0" prefWidth="79.0" text="Date" />
+      <PasswordField fx:id="pswdID" layoutX="107.0" layoutY="149.0" onKeyReleased="#pswdIDOnKeyReleased" prefHeight="25.0" prefWidth="176.0" promptText="Password" />
+      <TextField fx:id="txtPasswordShow" layoutX="107.0" layoutY="149.0" onKeyReleased="#txtShowPasswordOnKeyReleased2" prefHeight="25.0" prefWidth="176.0" visible="false" />
+      <CheckBox fx:id="cbPasswordShower" layoutX="291.0" layoutY="153.0" mnemonicParsing="false" onAction="#cbPasswordShowerOnAction" prefHeight="11.0" prefWidth="2.0" />
+      <Button layoutX="158.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnProgressOnAction" prefHeight="32.0" prefWidth="300.0" text="Button">
+         <graphic>
+            <ProgressBar fx:id="prgrsLoading" prefHeight="11.0" prefWidth="285.0" />
+         </graphic>
+      </Button>
+      <Button layoutX="502.0" layoutY="296.0" mnemonicParsing="false" onAction="#btnDataLoadOnAction" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #575fcf;" text="Input" textFill="WHITE" />
+   </children>
+</AnchorPane>
